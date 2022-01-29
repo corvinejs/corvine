@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true,
+    "preserveConstEnums": false,
+    "lib": ["ES2020"],
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "pretty": true,
+    "rootDir": ".",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "ES2020",
+    "paths": {
+      "@corvinejs/ws": ["./modules/ws/mod.ts"],
+      "@corvinejs/rest": ["./modules/rest/mod.ts"]
+    }
+  },
+  "include": ["modules/**/*.ts", "src/**/*.ts"],
+  "exclude": ["node_modules", "modules/**/build"]
+}

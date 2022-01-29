@@ -1,0 +1,17 @@
+{
+  "name": "@corvinejs/corvine",
+  "version": "0.0.1",
+  "description": "Corvine: Discord Library written in Typescript",
+  "main": "build/mod.js",
+  "repository": "git@github.com:corvinejs/corvine.git",
+  "author": "ItsRauf",
+  "license": "GPL-3.0",
+  "files": [
+    "build",
+    "package.json"
+  ],
+  "dependencies": {
+    "@corvinejs/rest": "^0.0.1",
+    "@corvinejs/ws": "^0.0.1"
+  }
+}

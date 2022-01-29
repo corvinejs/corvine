@@ -1,0 +1,46 @@
+{
+  "name": "corvine",
+  "version": "0.0.1",
+  "description": "Corvine: Discord Library written in Typescript",
+  "repository": "git@github.com:corvinejs/corvine.git",
+  "author": "ItsRauf",
+  "license": "GPL-3.0",
+  "private": true,
+  "bolt": {
+    "workspaces": [
+      "modules/*",
+      "testing"
+    ]
+  },
+  "scripts": {
+    "ws-exec": "bolt ws exec --ignore \"@corvinejs/test-space\" --",
+    "ws-exec-parallel": "bolt ws exec --parallel-nodes --ignore \"@corvinejs/test-space\" --",
+    "clean": "bolt ws-exec-parallel rimraf build",
+    "build": "bolt ws-exec node ../../scripts/build.js",
+    "format": "bolt ws-exec-parallel prettier --write \"src/**/*.ts\"",
+    "lint": "bolt ws-exec-parallel eslint src --ext .ts",
+    "check": "bolt ws-exec tsc"
+  },
+  "dependencies": {
+    "@types/centra": "^2.2.0",
+    "@types/node": "^17.0.6",
+    "@types/ws": "^8.2.2",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
+    "bolt": "^0.24.10",
+    "centra": "^2.5.0",
+    "discord-api-types": "^0.26.0",
+    "esbuild": "^0.14.10",
+    "esbuild-node-externals": "^1.4.1",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "estrella": "^1.4.1",
+    "fast-glob": "^3.2.7",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.4",
+    "ws": "^8.4.0"
+  }
+}
